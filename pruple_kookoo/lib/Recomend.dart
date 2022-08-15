@@ -5,32 +5,31 @@ class Recommended extends StatelessWidget {
   String title;
   String PS;
   String description;
-  IconData image;
+  String image;
   Color color;
   Recommended(this.title, this.description, this.image, this.PS, this.color);
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.topLeft,
-      margin: EdgeInsets.only(
-        left: MediaQuery.of(context).size.width * 0.03,
+      margin: EdgeInsets.symmetric(
+        horizontal: MediaQuery.of(context).size.width * 0.03,
       ),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height / 15,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height / 50,
-          ),
+          
           Row(
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                width: MediaQuery.of(context).size.width / 15,
+                width: MediaQuery.of(context).size.width * 0.03,
               ),
-              Icon(
-                image,
-                color: Color.fromARGB(255, 255, 255, 255),
-                size: MediaQuery.of(context).size.width / 15,
+              Image.asset(
+                "assets/images/$image.png",
+                width: MediaQuery.of(context).size.width / 8,
+                height: MediaQuery.of(context).size.height / 8,
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.height / 95,
@@ -40,76 +39,94 @@ class Recommended extends StatelessWidget {
                   SizedBox(
                     height: MediaQuery.of(context).size.height / 85,
                   ),
-                  Text(
-                    title,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: MediaQuery.of(context).size.height / 50,
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      fontWeight: FontWeight.bold,
-                      shadows: [
-                        Shadow(
-                          color: Color.fromARGB(228, 0, 0, 0),
-                          blurRadius: 20,
-                          offset: Offset(5, 1),
-                        ),
-                      ],
+                  
+                  Container(
+                    alignment: Alignment.center,
+                    child: Text(
+                      title,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.height / 50,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        fontWeight: FontWeight.bold,
+                        shadows: [
+                          Shadow(
+                            color: Color.fromARGB(228, 0, 0, 0),
+                            blurRadius: 20,
+                            offset: Offset(5, 1),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Text(
-                    title + "/Usdt",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: MediaQuery.of(context).size.height / 65,
-                      color: Color.fromARGB(88, 255, 255, 255),
-                      fontWeight: FontWeight.bold,
-                      shadows: [
-                        Shadow(
-                          color: Color.fromARGB(228, 0, 0, 0),
-                          blurRadius: 20,
-                          offset: Offset(5, 1),
-                        ),
-                      ],
+                  Container(
+                    alignment: Alignment.center,
+                    child: Text(
+                      title + "/Usdt",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.height / 65,
+                        color: Color.fromARGB(88, 255, 255, 255),
+                        fontWeight: FontWeight.bold,
+                        shadows: [
+                          Shadow(
+                            color: Color.fromARGB(228, 0, 0, 0),
+                            blurRadius: 20,
+                            offset: Offset(5, 1),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
               ),
             ],
           ),
-          SizedBox(
-            width: MediaQuery.of(context).size.width / 3,
-          ),
-          Column(
+          
+          
+          Row(
             children: [
+              Column(
+                children: [
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height / 70,
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    child: Text(
+
+                      description,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.height / 45,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  
+                  Text(
+                    PS,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.height / 60,
+                      color: color,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
               SizedBox(
-                height: MediaQuery.of(context).size.height / 70,
-              ),
-              Text(
-                description,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: MediaQuery.of(context).size.height / 45,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(width: MediaQuery.of(context).size.width / 15),
-              Text(
-                PS,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: MediaQuery.of(context).size.height / 60,
-                  color: color,
-                  fontWeight: FontWeight.bold,
-                ),
+                width: MediaQuery.of(context).size.width * 0.04,
               ),
             ],
           ),
+          
         ],
       ),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
-        color: Color.fromARGB(65, 255, 255, 255),
+        borderRadius: BorderRadius.circular(16),
+        color: Colors.white.withOpacity(0.15),
       ),
     );
   }

@@ -5,7 +5,7 @@ class Box extends StatelessWidget {
   String title;
   String PS;
   String description;
-  IconData image;
+  String image;
   Box(this.title, this.description, this.image, this.PS);
   Widget build(BuildContext context) {
     return 
@@ -19,22 +19,23 @@ class Box extends StatelessWidget {
                 height: MediaQuery.of(context).size.height / 6,
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height / 50,
-                    ),
+                    // SizedBox(
+                    //   height: MediaQuery.of(context).size.height / 110,
+                    // ),
                     Row(
                       // crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
-                          width: MediaQuery.of(context).size.width / 15,
+                          width: MediaQuery.of(context).size.width / 22,
                         ),
-                        Icon(
-                          image,
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          size: MediaQuery.of(context).size.width / 10,
+                        Image.asset(
+                          "assets/images/$image.png",
+                          width: MediaQuery.of(context).size.width / 9,
+                          height: MediaQuery.of(context).size.height / 9,
                         ),
+                        
                         SizedBox(
-                          width: MediaQuery.of(context).size.height / 95,
+                          width: MediaQuery.of(context).size.width / 95,
                         ),
                         Column(
                           children: [
@@ -42,7 +43,7 @@ class Box extends StatelessWidget {
                               title,
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                fontSize: MediaQuery.of(context).size.height / 30,
+                                fontSize: MediaQuery.of(context).size.height / 35,
                                 color: Color.fromARGB(255, 255, 255, 255),
                                 fontWeight: FontWeight.bold,
                                 shadows: [
@@ -75,9 +76,7 @@ class Box extends StatelessWidget {
                         
                       ],
                     ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height / 35,
-                    ),
+                    
                     Row(
                       children: [
                         SizedBox(
@@ -109,7 +108,8 @@ class Box extends StatelessWidget {
                 ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: Color.fromARGB(65, 255, 255, 255),
+                  //color: Color.fromARGB(65, 255, 255, 255),
+                  color: Colors.white.withOpacity(0.13),
                 ),
               
               
