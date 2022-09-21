@@ -15,7 +15,7 @@ class Recommended extends StatelessWidget {
         horizontal: MediaQuery.of(context).size.width * 0.03,
       ),
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height / 15,
+      height: MediaQuery.of(context).size.height / 14,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -35,25 +35,27 @@ class Recommended extends StatelessWidget {
                 width: MediaQuery.of(context).size.height / 95,
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
                     height: MediaQuery.of(context).size.height / 85,
                   ),
                   
                   Container(
-                    alignment: Alignment.center,
+                    
+                    
                     child: Text(
                       title,
-                      textAlign: TextAlign.center,
+                      textAlign: TextAlign.start,
                       style: TextStyle(
                         fontSize: MediaQuery.of(context).size.height / 50,
                         color: Color.fromARGB(255, 255, 255, 255),
                         fontWeight: FontWeight.bold,
                         shadows: [
                           Shadow(
-                            color: Color.fromARGB(228, 0, 0, 0),
-                            blurRadius: 20,
-                            offset: Offset(5, 1),
+                            color: Color.fromARGB(170, 0, 0, 0),
+                            blurRadius: 40,
+                            
                           ),
                         ],
                       ),
@@ -68,13 +70,8 @@ class Recommended extends StatelessWidget {
                         fontSize: MediaQuery.of(context).size.height / 65,
                         color: Color.fromARGB(88, 255, 255, 255),
                         fontWeight: FontWeight.bold,
-                        shadows: [
-                          Shadow(
-                            color: Color.fromARGB(228, 0, 0, 0),
-                            blurRadius: 20,
-                            offset: Offset(5, 1),
-                          ),
-                        ],
+                        
+                        
                       ),
                     ),
                   ),
@@ -85,15 +82,17 @@ class Recommended extends StatelessWidget {
           
           
           Row(
+       
             children: [
+              
               Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   SizedBox(
                     height: MediaQuery.of(context).size.height / 70,
                   ),
-                  Container(
-                    alignment: Alignment.center,
-                    child: Text(
+                  
+                    Text(
 
                       description,
                       textAlign: TextAlign.center,
@@ -103,11 +102,11 @@ class Recommended extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ),
+                  
                   
                   Text(
                     PS,
-                    textAlign: TextAlign.center,
+                    textAlign: TextAlign.start,
                     style: TextStyle(
                       fontSize: MediaQuery.of(context).size.height / 60,
                       color: color,

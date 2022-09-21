@@ -48,10 +48,10 @@ class Box extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                                 shadows: [
                                   Shadow(
-                                    color: Color.fromARGB(228, 0, 0, 0),
-                                    blurRadius: 20,
-                                    offset: Offset(5, 1),
-                                  ),
+                            color: Color.fromARGB(170, 0, 0, 0),
+                            blurRadius: 40,
+                            
+                          ),
                                 ],
                               ),
                             ),
@@ -62,13 +62,8 @@ class Box extends StatelessWidget {
                                 fontSize: MediaQuery.of(context).size.height / 65,
                                 color: Color.fromARGB(88, 255, 255, 255),
                                 fontWeight: FontWeight.bold,
-                                shadows: [
-                                  Shadow(
-                                    color: Color.fromARGB(228, 0, 0, 0),
-                                    blurRadius: 20,
-                                    offset: Offset(5, 1),
-                                  ),
-                                ],
+                                
+                                
                               ),
                             ),
                           ],

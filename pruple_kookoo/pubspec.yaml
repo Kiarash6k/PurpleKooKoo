@@ -39,7 +39,7 @@ dependencies:
   flutter_speed_dial: ^6.0.0
   flutter_svg: ^1.1.1+1
   cryptocoins_icons:
-  
+  http:
 
 dev_dependencies:
   flutter_test:
